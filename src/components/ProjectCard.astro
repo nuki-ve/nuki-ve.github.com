@@ -1,0 +1,79 @@
+---
+const { project, key } = Astro.props;
+---
+
+<a href={project.url} target="_blank" class="project" id={key} data-skills={project.skills.join(', ')}>
+  <section class="bannerContainer">
+    <img class="banner" src={project.image} alt={project.name}/>
+  </section>
+
+  <section class="details">
+    <img class="logo" src={project.favicon} alt={`${project.name} logo`} >
+    <span class="projectTitle">{project.name}</span>
+  </section>
+  <p>{project.description}</p>
+</a>
+
+<style lang="less">
+@radius: 0.9rem;
+
+a {
+  border: 1px solid #ccc;
+  width: 325px;
+  padding: 0.8rem;
+  border-radius: @radius;
+  display: inline-block;
+  text-decoration: none;
+  color: initial;
+  overflow: hidden;
+  transition: box-shadow 0.3s, border-color 0.3s;
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: #007acc;
+  }
+
+  img {
+    border: 1px solid #ccc;
+  }
+}
+
+.bannerContainer{
+  height: fit-content;
+  
+  .banner{
+    width: 100%;
+    aspect-ratio: 16/8;
+    object-fit: cover;
+    border-radius: @radius;
+  }
+}
+
+.details{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+
+  .projectTitle{
+    font-weight: bold;
+    font-size: 1.4rem;
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+
+  
+  .logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+p{
+  margin: 0;
+  margin-top: 0.4rem;
+  line-height: 1.3rem;
+  height: calc(4 * 1.3rem);
+}
+</style>

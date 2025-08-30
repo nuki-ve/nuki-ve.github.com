@@ -1,5 +1,5 @@
 ---
-import Project from '@/components/Project.astro'
+import ProjectCard from '@/components/ProjectCard.astro'
 import projectsData from '@/projects.json' 
 import { SKILLS } from '@/const'
 ---
@@ -41,7 +41,7 @@ import { SKILLS } from '@/const'
     <main>
       {
         projectsData.map((project) => (
-          <Project project={project} key={project.name} />
+          <ProjectCard project={project} key={project.name} />
         ))
       }
       <script>
@@ -53,6 +53,10 @@ import { SKILLS } from '@/const'
         })
       </script>
     </main>
+
+    <footer>
+      <p style="text-align: center; margin: 2rem 0;">by ☀nuki☀ (me 🙂) </p>
+    </footer>
   </body>
 </html>
 
@@ -135,5 +139,15 @@ header {
     #sqlSkill:hover, #sqlSkill.hovered { background-color: #f29111; color: white; }
     #mongoSkill:hover, #mongoSkill.hovered { background-color: #47a248; color: white; }
   }
+}
+
+main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 2rem;
 }
 </style>

@@ -2,7 +2,7 @@
   {
     "name": "Caninclude",
     "description": "Can I include a child tag to a parent tag? HTML tag reference for developers.",
-    "url": "https://caninclude.onrender.com//",
+    "url": "https://caninclude.onrender.com/",
     "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2021/10/caninclude.jpg",
     "favicon": "https://caninclude.onrender.com/assets/logo.svg",
     "skills": ["JS", "LESS"],
