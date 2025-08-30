@@ -1,0 +1,16 @@
+export const SKILLS = {
+  html: 'HTML',
+  css: 'CSS',
+  less: 'LESS',
+  js: 'JS',
+  ts: 'TS',
+  vite: 'VITE',
+  astro: 'ASTRO',
+  react: 'REACT',
+  tailwind: 'TAILWIND',
+  uxui: 'UX/UI',
+  sql: 'SQL',
+  mongo: 'MONGODB',
+  node: 'NODE',
+  express: 'EXPRESS',
+} as const
