@@ -60,6 +60,17 @@ import { SKILLS } from '@/const'
   </body>
 </html>
 
+<script>
+const header = document.querySelector('header')
+const hero = document.querySelector('#hero')
+const handleResize = () => header.style.setProperty(
+  'top',
+  `-${hero.getBoundingClientRect().height}px`
+)
+handleResize()
+window.addEventListener('resize', handleResize)
+</script>
+
 <style lang="less">
 body {
   position: relative;
@@ -116,6 +127,7 @@ header {
     gap: 10px;
     justify-content: center;
     margin-top: 20px;
+    padding: 0 1rem;
 
     span {
       background-color: #f0f0f0;
