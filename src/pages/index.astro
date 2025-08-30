@@ -12,12 +12,13 @@ import { SKILLS } from '@/const'
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2c1caa7fa0.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
     <header>
       <section id="hero">
-        <h1>nukive</h1>
+        <h1>nukive <a href="https://github.com/nuki-ve/nuki-ve.github.com" target="_blank" class="icon"><i class="fa-brands fa-github"></i></a></h1>
         <h3>self-taught full stack web developer</h3>
       </section>
 
@@ -74,6 +75,16 @@ body {
   h6 { font-size: 1.2rem };
   p  { font-size: 1rem; }
   small { font-size: 0.833rem; }
+
+  .icon {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #007acc;
+    }
+  }
 }
 
 header {
