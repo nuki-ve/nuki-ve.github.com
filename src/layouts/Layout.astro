@@ -17,7 +17,7 @@ const { tabTitle, pageTitle, subTitle } = Astro.props;
     <header>
       <section id="hero">
         <h1>{pageTitle} <slot name="icon"/></h1>
-        <h3>{subTitle}</h3>
+        <h2>{subTitle}</h2>
       </section>
 
       <slot name="header"/>
@@ -26,12 +26,14 @@ const { tabTitle, pageTitle, subTitle } = Astro.props;
     <slot name="main"/>
 
     <footer>
-      <p style="text-align: center; margin: 2rem 0;">☀nuki☀</p>
+      <a href="/">
+        <p style="text-align: center; margin: 2rem 0;">☀nuki☀</p>
+      </a>
     </footer>
   </body>
 </html>
 
-<style lang="less">
+<style lang="less" is:global>
 body {
   position: relative;
   font-family: "Noto Sans", sans-serif;
@@ -46,7 +48,7 @@ body {
   h4 { font-size: 1.728rem };
   h5 { font-size: 1.44rem };
   h6 { font-size: 1.2rem };
-  p  { font-size: 1rem; }
+  p  { font-size: 0.9rem; }
   small { font-size: 0.833rem; }
 }
 
@@ -61,11 +63,11 @@ header {
   background: white;
   padding-bottom: 10px;
 
-  h1, h3 {
+  #hero>h1, #hero>h2 {
     margin: 1rem;
   }
 
-  h3 {
+  #hero>h2 {
     color: #777;
   }
 }

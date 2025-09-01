@@ -1,38 +1,10 @@
 [
   {
-    "name": "Caninclude",
-    "description": "Can I include a child tag to a parent tag? HTML tag reference for developers.",
-    "url": "https://caninclude.onrender.com/",
-    "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2021/10/caninclude.jpg",
-    "favicon": "https://caninclude.onrender.com/assets/logo.svg",
-    "skills": ["JS", "LESS"],
-    "show": ["JS", "LESS"]
-  },
-  {
-    "name": "Excalidraw Whiteboard",
-    "description": "Excalidraw is a virtual collaborative whiteboard tool that lets you easily sketch diagrams that have a hand-drawn feel to them.",
-    "url": "https://excalidraw.com/",
-    "image": "https://excalidraw.com/og-image-3.png",
-    "favicon": "https://excalidraw.com/favicon-32x32.png",
-    "skills": ["TS", "JS", "TAILWIND"],
-    "show": ["TS", "TAILWIND"]
-  },
-  {
-    "name": "Typescale",
-    "description": "TypeScale is a free web-based tool that helps designers and developers create harmonious typography systems for websites and applications.",
-    "url": "https://typescale.com/",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpXvbUSOM81dAb-To8bbk10Dkipn8eoZbomw&s",
-    "favicon": "https://typescale.com/wp-content/themes/typescale/favicon/favicon.ico?ver=1.2.49",
-    "skills": ["TS", "CSS", "REACT"],
-    "show": ["REACT"]
-  },
-  {
-    "name": "codi.link",
-    "description": "codi.link is a live editor for HTML, CSS and JS. Edit your code in real-time, and see the result instantly",
-    "url": "https://codi.link/",
-    "image": "https://user-images.githubusercontent.com/1561955/136448123-471b6332-8e0c-402e-956b-80adf2585168.png",
-    "favicon": "https://raw.githubusercontent.com/midudev/codi.link/refs/heads/main/assets/favicon.ico",
-    "skills": ["JS", "CSS"],
-    "show": ["JS"]
+    "name": "tools",
+    "description": "A collection of web dev/design tools and resources.",
+    "url": "/tools",
+    "image": "",
+    "favicon": "",
+    "skills": ["ASTRO", "REACT", "LESS", "TS", "VITE"]
   }
 ]

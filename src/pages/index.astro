@@ -5,7 +5,7 @@ import { SKILLS } from '@/const'
 import Layout from '@/layouts/Layout.astro'
 ---
 
-<Layout tabTitle="nukive - Portfolio" pageTitle="nukive" subTitle="self-taught full stack web developer">
+<Layout tabTitle="portfolio - nukive" pageTitle="nukive" subTitle="self-taught full stack web developer">
   <a 
     slot="icon"
     href="https://github.com/nuki-ve/nuki-ve.github.com"
@@ -30,22 +30,26 @@ import Layout from '@/layouts/Layout.astro'
         <span id="sqlSkill" data-skill={SKILLS.sql}>SQL</span>
         <span id="mongoSkill" data-skill={SKILLS.mongo}>MongoDB</span>
       </section>
-  </div>
-
+    </div>
+    
+    
   <main slot="main">
-    {
-      projectsData.map((project) => (
-        <ProjectCard project={project} key={project.name} />
-      ))
-    }
-    <script>
-      document.querySelectorAll('.project').forEach((proj:HTMLElement) => {
-        proj.dataset.skills.split(', ').forEach(skill => {
-          proj.addEventListener('mouseover', () => document.querySelector(`[data-skill="${skill}"]`).classList.add('hovered'))
-          proj.addEventListener('mouseout', () => document.querySelector(`[data-skill="${skill}"]`).classList.remove('hovered'))
+    <h3 id="projectSection">my projects</h3>
+    <div id="projects">
+      {
+        projectsData.map((project) => (
+          <ProjectCard project={project} key={project.name} />
+        ))
+      }
+      <script>
+        document.querySelectorAll('.projectCard').forEach((proj:HTMLElement) => {
+          proj.dataset.skills.split(', ').forEach(skill => {
+            proj.addEventListener('mouseover', () => document.querySelector(`[data-skill="${skill}"]`).classList.add('hovered'))
+            proj.addEventListener('mouseout', () => document.querySelector(`[data-skill="${skill}"]`).classList.remove('hovered'))
+          })
         })
-      })
-    </script>
+      </script>
+    </div>
   </main>
 </Layout>
 
@@ -81,10 +85,14 @@ import Layout from '@/layouts/Layout.astro'
   #mongoSkill:hover, #mongoSkill.hovered { background-color: #47a248; color: white; }
 }
 
-main {
+#projectSection {
+  text-align: center;
+}
+
+#projects {
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 2rem;
   max-width: 800px;
   margin: auto;

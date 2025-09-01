@@ -1,0 +1,66 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import '@/styles/projectCard.less'
+import ToolsPage from "@/components/tools/ToolsPage.tsx"
+---
+
+<Layout 
+  pageTitle="tools"
+  tabTitle="tools - nukive" 
+  subTitle="...and resources for web devs/designers"
+>
+  <main id="wrapper" slot="main">
+    <ToolsPage client:idle />
+  </main>
+</Layout>
+
+<style lang="less" scoped>
+@import url('@/styles/projectCard.less');
+</style>
+
+<style lang="less" is:global>
+  
+main#wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: min-content 1fr;
+  gap: 1rem;
+}
+
+main#content {
+  display: flex;
+  flex-wrap: wrap;
+  height: fit-content;
+  gap: 2rem;
+  flex: 1;
+  justify-content: center;
+}
+
+header#navWrapper {
+  flex-direction: row;
+  justify-content: start;
+  gap: 1rem;
+
+  nav{
+    padding: .5rem;
+    border: 1px solid #ccc
+  }
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  gap: 1rem;
+  padding: 1rem;
+  grid-row: 1/3;
+
+  label {
+    border: 1px solid orange;
+    padding: 0.8rem;
+    background: antiquewhite;
+    cursor: pointer;
+    user-select: none;
+  }
+}
+</style>
