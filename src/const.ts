@@ -1,5 +1,6 @@
 export const SKILLS = {
   html: 'HTML',
+  md: 'MD',
   css: 'CSS',
   less: 'LESS',
   js: 'JS',

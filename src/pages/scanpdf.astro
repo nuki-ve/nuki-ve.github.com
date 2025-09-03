@@ -1,0 +1,32 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import ScanPDFPage from "@/components/scanpdf/ScanPDFPage.tsx"
+---
+
+<Layout tabTitle="scan to PDF - nukive" pageTitle="scan documents" subTitle="and convert them to pdf">
+  <main id="content" slot="main">
+    <ScanPDFPage client:idle/>
+  </main>
+</Layout>
+
+<style lang="less" is:global>
+main#content {
+  display: flex;
+  width: 100%;
+  height: 600px;
+
+  aside {
+    overflow-y: overlay;
+
+    img {
+      aspect-ratio: 1.61;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
+  main {
+    flex: 1;
+  }
+}
+</style>

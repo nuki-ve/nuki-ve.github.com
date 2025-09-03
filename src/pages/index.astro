@@ -18,6 +18,7 @@ import Layout from '@/layouts/Layout.astro'
   <div slot="header">
     <section id="skills">
         <span id="htmlSkill" data-skill={SKILLS.html}>HTML</span>
+        <span id="mdSkill" data-skill={SKILLS.md}>Markdown</span>
         <span id="cssSkill" data-skill={SKILLS.css}>CSS</span>
         <span id="lessSkill" data-skill={SKILLS.less}>LessCSS</span>
         <span id="jsSkill" data-skill={SKILLS.js}>JS</span>
@@ -72,6 +73,7 @@ import Layout from '@/layouts/Layout.astro'
   }
 
   #htmlSkill:hover, #htmlSkill.hovered { background-color: #e34c26; color: white; }
+  #mdSkill:hover, #mdSkill.hovered { background-color: #007acc; color: white; }
   #cssSkill:hover, #cssSkill.hovered { background-color: #264de4; color: white; }
   #lessSkill:hover, #lessSkill.hovered { background-color: #1d365d; color: white; }
   #jsSkill:hover, #jsSkill.hovered { background-color: #f0db4f; color: black; }

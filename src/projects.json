@@ -5,6 +5,30 @@
     "url": "/tools",
     "image": "",
     "favicon": "",
-    "skills": ["ASTRO", "REACT", "LESS", "TS", "VITE"]
+    "skills": ["ASTRO", "REACT", "LESS", "TS"]
+  },
+  {
+    "name": "scan to PDF (in progress)",
+    "description": "A simple web app to scan documents using your device's camera and convert them into PDF files.",
+    "url": "/scanpdf",
+    "image": "",
+    "favicon": "",
+    "skills": ["ASTRO", "REACT", "TAILWIND", "TS"]
+  },
+  {
+    "name": "CV maker (soon)",
+    "description": "A web app to create and customize professional CVs and resumes with ease, using pre-designed templates and a user-friendly interface.",
+    "url": "",
+    "image": "",
+    "favicon": "",
+    "skills": ["ASTRO", "REACT", "LESS", "TS"]
+  },
+  {
+    "name": "blog (soon)",
+    "description": "A personal blog sharing insights, tutorials, and experiences in web development and design.",
+    "url": "",
+    "image": "",
+    "favicon": "",
+    "skills": ["ASTRO", "TAILWIND", "MD"]
   }
 ]
