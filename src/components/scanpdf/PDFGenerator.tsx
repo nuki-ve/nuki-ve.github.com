@@ -1,5 +1,5 @@
 import jsPDF from "jspdf"
-import { useEffect, useRef, useState } from "react"
+import { useRef } from "react"
 
 type Props = {
   images: string[]
@@ -8,7 +8,7 @@ type Props = {
 export default function PDFGenerator({images}:Props) {
   const embedRef = useRef<HTMLEmbedElement | null>(null)
 
-  useEffect(() => {
+  const handleSave = () => {
     (async () => {
       const pdf = new jsPDF({
         orientation: "portrait",
@@ -69,19 +69,14 @@ export default function PDFGenerator({images}:Props) {
         )
       }
 
-      embedRef.current.src = pdf.output('datauristring') || null
+      pdf.save('document.pdf')
     })()
 
-  })
+  }
 
   return (
-    <main>
-      <embed 
-        type="application/pdf" 
-        width="100%" 
-        height="600px"
-        ref={embedRef}
-      />
-    </main>
+    <button onClick={handleSave}>
+      Save PDF
+    </button>
   )
 }

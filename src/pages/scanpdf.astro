@@ -1,32 +1,109 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import ScanPDFPage from "@/components/scanpdf/ScanPDFPage.tsx"
+import ScanPDF from "@/components/scanpdf/ScanPDF.tsx"
 ---
 
 <Layout tabTitle="scan to PDF - nukive" pageTitle="scan documents" subTitle="and convert them to pdf">
   <main id="content" slot="main">
-    <ScanPDFPage client:idle/>
+    <ScanPDF client:idle/>
   </main>
 </Layout>
 
 <style lang="less" is:global>
 main#content {
   display: flex;
+  gap: 1rem;
   width: 100%;
   height: 600px;
 
   aside {
-    overflow-y: overlay;
+    // overflow-y: overlay;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    
+    #panel{
+      overflow-y: overlay;
+    }
 
-    img {
-      aspect-ratio: 1.61;
-      object-fit: cover;
-      object-position: top;
+    .item {
+      text-align: center;
+
+      img {
+        max-width: 150px;
+        aspect-ratio: .618;
+        object-fit: cover;
+        object-position: top;
+      }
     }
   }
 
-  main {
-    flex: 1;
+  main#previewMain {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 5;
+
+    #pdfOptions {
+
+    }
+    
+    #previewWrapper{
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow-y: overlay;
+      border: 1px solid;
+
+      #previewOptions{
+        display: flex;
+        user-select: none;
+        padding: 0.4rem;
+        
+        &>*{
+          flex: 1;
+        }
+
+        #scaler {
+          text-align: center;
+
+          #scalePercent {
+            cursor: pointer;
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+      
+      #preview {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: overlay;
+        padding: 10px;
+        gap: 1rem;
+  
+        .page {
+          border: 1px solid #333;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #fff;
+          font-size: 16px;
+          color: #666;
+          
+          img {
+            object-fit: contain;
+          }
+        }
+      }
+    }
+
   }
 }
 </style>
