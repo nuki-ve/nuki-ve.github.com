@@ -37,9 +37,10 @@ export default function AddPagesButton({setImages}:Props) {
       <input 
         ref={imgInputRef} 
         type="file" 
-        accept=".jpg" 
+        accept=".jpg, .jpeg, .png" 
         multiple 
         onChange={handleFileUpload}
+        capture
         hidden 
       />
       <button onClick={handleAddPages}>Add pages</button>
