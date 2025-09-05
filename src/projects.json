@@ -16,9 +16,9 @@
     "skills": ["ASTRO", "REACT", "TAILWIND", "TS"]
   },
   {
-    "name": "CV maker (soon)",
-    "description": "A web app to create and customize professional CVs and resumes with ease, using pre-designed templates and a user-friendly interface.",
-    "url": "",
+    "name": "CV generator (in progress)",
+    "description": "A web app to create and customize professional CVs with ease, using pre-designed templates and a user-friendly interface.",
+    "url": "https://nuki-ve.github.io/cv-generator/",
     "image": "",
     "favicon": "",
     "skills": ["ASTRO", "REACT", "LESS", "TS"]
