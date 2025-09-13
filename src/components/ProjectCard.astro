@@ -2,7 +2,7 @@
 const { project, key } = Astro.props;
 ---
 
-<a href={project.url} target="_blank" class="projectCard" id={key} data-skills={project.skills.join(', ')}>
+<a href={project.url} class="projectCard" id={key} data-skills={project.skills.join(', ')}>
   <section class="bannerContainer">
     <img class="banner" src={project.image} alt={project.name}/>
   </section>
